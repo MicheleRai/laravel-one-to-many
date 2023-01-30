@@ -25,7 +25,11 @@
                             <a href="{{ route('admin.posts.edit', ['post' => $post]) }}" class="btn btn-warning">Edita</a>
                         </td>
                         <td>
-                            <button class="btn btn-danger btn-delete-me" data-id="{{ $post->id }}">Elimina</button>
+                            <form action="{{ route('admin.posts.destroy', ['post' => $post]) }}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger btn-delete-me">Elimina</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
