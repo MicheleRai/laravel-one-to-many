@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
 use App\Post;
+use App\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PostController extends Controller
 {
@@ -31,10 +32,10 @@ class PostController extends Controller
      */
     public function create()
     {
-        $posts = Post::all('id');
+        $categories = Category::all('id', 'name');
 
         return view('admin.posts.create', [
-            'posts'    => $posts,
+            'categories'    => $categories,
         ]);
     }
 

@@ -33,21 +33,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="slug" class="form-label">Slug</label>
-                <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" value="{{ old('slug') }}">
-                <div class="invalid-feedback">
-                    @error('slug')
-                        <ul>
-                            @foreach ($errors->get('slug') as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @enderror
-                </div>
-            </div>
-
-            <div class="mb-3">
-                {{-- <label for="category_id" class="form-label">Categoria</label>
+                <label for="category_id" class="form-label">Categoria</label>
                 <select class="form-select @error('category_id') is-invalid @enderror" id="category_id" name="category_id">
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -62,7 +48,7 @@
                         </ul>
                     @enderror
                 </div>
-            </div> --}}
+            </div>
 
             <div class="mb-3">
                 <label for="image" class="form-label">URL immagine</label>
@@ -78,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label for="uploaded_img" class="form-label">Immagine</label>
                 <input class="form-control @error('uploaded_img') is-invalid @enderror" type="file" id="uploaded_img" name="uploaded_img">
                 <div class="invalid-feedback">
@@ -90,7 +76,7 @@
                         </ul>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
 
             <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
